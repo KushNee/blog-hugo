@@ -5,11 +5,11 @@
 #+author:
 #+hugo_custom_front_matter: :author "Kush Nee"
 
-* Programming :@Programming
+* Programming :@Programming:
 ** TODO 测试使用 ox-hugo 写博客                         :org_mode:hugo:emacs:
    :PROPERTIES:
    :EXPORT_FILE_NAME: blog-with-ox-hugo
    :END:
 
-
    来测试下 ox-hugo, 看样子还行. 继续测试
+   这能成？

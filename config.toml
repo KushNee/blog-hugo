@@ -1,8 +1,31 @@
 baseURL = "https://kushnee.codes/"
 languageCode = "en-us"
+defaultContentLanguage = "zh-cn"
 title = "KCN's Blog"
 
 theme = "hyde"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    archive = "archives"
+
+[author]
+    name = "Kush Nee"
+
+[menu]
+    [[menu.main]]
+        identifier = "tag"
+        name = "Tags"
+        title = "tags"
+        url = "/tags"
+
+    [[menu.main]]
+        identifier = "category"
+        name = "Categories"
+        title = "categories"
+        url = "/categories"
+
 
 [params]
     description = "一个程序猿的空间"
