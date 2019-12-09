@@ -1,7 +1,8 @@
 +++
 title = "git 常用命令整理"
 lastmod = 2019-01-18T13:07:35+08:00
-tags = ["工具", "整理"]
+tags = ["git"]
+categories = ["tools"]
 draft = false
 author = "Kush Nee"
 +++
