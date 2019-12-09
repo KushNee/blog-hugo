@@ -14,6 +14,8 @@ author = "Kush Nee"
   - 指定查看个数（从新到旧）`-n<number>`
   - 查看全部分支日志`--all`
   - 图形化`-—graph`
+<!--more-->
+
 - 修改 commit 的 message
 
   - 修改最近一次`git commit —amend`
@@ -23,7 +25,6 @@ author = "Kush Nee"
     - `git rebase -i <parent-commit-hash>`
     - `reowrd/r <rename-commit-hash> <original-commit-meesage>`
     - 新界面与提交 message 编辑界面相同，直接修改保存
-<!--more-->
 
 - 合并 commit
   - `git rebase -i <parent-commit-hash>`
