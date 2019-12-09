@@ -1,0 +1,15 @@
+#+TITLE: Blog Hugo
+#+HUGO_BASE_DIR: ~/Blog-hugo
+#+HUGO_SECTION: post
+#+HUGO_AUTO_SET_LASTMOD: t
+#+author:
+#+hugo_custom_front_matter: :author "Kush Nee"
+
+* Programming :@Programming
+** TODO 测试使用 ox-hugo 写博客                         :org_mode:hugo:emacs:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: blog-with-ox-hugo
+   :END:
+
+
+   来测试下 ox-hugo, 看样子还行. 继续测试

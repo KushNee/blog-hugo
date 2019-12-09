@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "KCN's Blog"
+
+theme = "hyde"
+
+[params]
+    description = "一个程序猿的空间"
