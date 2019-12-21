@@ -4,6 +4,7 @@ defaultContentLanguage = "zh-cn"
 title = "KCN's Blog"
 
 theme = "hyde"
+disqusShortname = "sotoughtofindshort"
 
 [taxonomies]
     tag = "tags"
