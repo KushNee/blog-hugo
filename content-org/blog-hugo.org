@@ -6,16 +6,23 @@
 #+hugo_custom_front_matter: :author "Kush Nee"
 
 * Programming :@Programming:
-** TODO 测试使用 ox-hugo 写博客                         :org_mode:hugo:emacs:
-   :PROPERTIES:
-   :EXPORT_FILE_NAME: blog-with-ox-hugo
-   :END:
+** DONE 同步、异步、阻塞、非阻塞之间的关系
+:PROPERTIES:
+:EXPORT_FILE_NAME: sync-async-block-non-block
+:END:
 
-   来测试下 ox-hugo, 看样子还行. 继续测试
+- 同步：必须等到资源返回之后才能继续执行
+- 异步：先请求资源，之后在需要的地方使用资源
+- 阻塞：资源请求后，必须成功获取返回后才能继续执行
+- 非阻塞：先请求资源，之后在使用资源时再查询资源是否成功获取
+---
+- 同步阻塞：线程开始请求资源时，暂停后续所有操作，直到资源成功返回
+- 同步非阻塞：线程请求资源后立刻返回，不管资源是否真正获取。核心是欺骗线程资源已
+  获取，它会在使用资源处阻塞
+- 异步：线程请求资源，但不需要返回。当需要使用资源时，若资源未到位，则在此处阻塞
 
-   这能成？再来
-
-
+总结：阻塞和非阻塞的区别是资源的 =获取= 和 =返回= 是否需要一同完成。换句话说，资
+源请求之后是否需要 =立刻使用= 。阻塞是必然存在的，因为没有资源就没法执行。重点是充分利用 =资源请求= 和 =资源使用= 之间的时间。也因此，异步没有阻塞和非阻塞的说法。
 * Tools :@Tools:
 ** DONE RT-AC66U_b1 中 smartdns 和 entware 冲突的有趣问题
 :PROPERTIES:
