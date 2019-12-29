@@ -3,7 +3,7 @@ title = "{{ replace .Name "-" " " | title }}"
 date = {{ .Date }}
 draft = true
 tags = [""]
-categories = [""]
+categories = ["Programming"]
 isCJKLanguage = true
 author = "Kush Nee"
 +++
