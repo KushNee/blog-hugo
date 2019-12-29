@@ -6,6 +6,9 @@ title = "KCN's Blog"
 theme = "hyde"
 disqusShortname = "sotoughtofindshort"
 
+[frontmatter]
+    lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+
 [taxonomies]
     tag = "tags"
     category = "categories"
