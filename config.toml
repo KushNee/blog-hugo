@@ -1,35 +1,18 @@
 baseURL = "https://kushnee.codes/"
 languageCode = "en-us"
-defaultContentLanguage = "zh-cn"
-title = "KCN's Blog"
-
-theme = "hyde"
-disqusShortname = "sotoughtofindshort"
-
-[frontmatter]
-    lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
-
-[taxonomies]
-    tag = "tags"
-    category = "categories"
-    archive = "archives"
+title = "Joway's Blog"
+theme = "yinyang"
+DefaultContentLanguage = "cn"
 
 [author]
-    name = "Kush Nee"
-
-[menu]
-    [[menu.main]]
-        identifier = "tag"
-        name = "Tags"
-        title = "tags"
-        url = "/tags"
-
-    [[menu.main]]
-        identifier = "category"
-        name = "Categories"
-        title = "categories"
-        url = "/categories"
-
+name = "Kush"
+homepage = "https://kushnee.codes/"
 
 [params]
-    description = "Workout. Programming. Learning"
+disqus = "sotoughtofindshort" # disqus account name
+headTitle = "Kush Nee"
+mainSections = ["life","programming","tools"]
+
+[[params.socials]]
+name = "Workout. Programming. Learning"
+link = "https://kushnee.codes"
