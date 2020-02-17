@@ -1,0 +1,18 @@
+baseURL = "https://kushnee.codes/"
+languageCode = "en-us"
+title = "Joway's Blog"
+theme = "yinyang"
+DefaultContentLanguage = "cn"
+
+[author]
+name = "Kush"
+homepage = "https://kushnee.codes/"
+
+[params]
+disqus = "sotoughtofindshort" # disqus account name
+headTitle = "Kush Nee"
+mainSections = ["life","programming","tools"]
+
+[[params.socials]]
+name = "Workout. Programming. Learning"
+link = "https://kushnee.codes"
