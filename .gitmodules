@@ -9,4 +9,4 @@
 	url = https://github.com/yihui/hugo-ivy.git
 [submodule "themes/LoveIt"]
 	path = themes/LoveIt
-	url = git@github.com:KushNee/LoveIt.git
+	url = https://github.com/KushNee/LoveIt.git
