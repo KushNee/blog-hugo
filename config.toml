@@ -310,7 +310,7 @@ dateFormatToUse = "2006-01-02"
     # Disqus Comment Config (https://disqus.com/)
     [params.comment.disqus]
       # Disqus shortname to use Disqus in posts
-      shortname = "dillonzq"
+      shortname = ""
 
     # Gittalk Comment Config (https://github.com/gitalk/gitalk)
     [params.comment.gitalk]
