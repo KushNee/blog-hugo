@@ -1,0 +1,29 @@
+baseURL = "https://kushnee.codes/"
+languageCode = "en-us"
+title = "KCN's Blog"
+theme = "hugo-ivy"
+disqusShortname = "sotoughtofindshort" # disqus account name
+hasCJKLanguage = true
+DefaultContentLanguage = "cn"
+footnotereturnlinkcontents = "↩"
+
+[[menu.main]]
+name = "首页"
+url = "/"
+weight = 1
+[[menu.main]]
+name = "分类"
+url = "/categories"
+weight = 2
+
+[params]
+    description = "Workout. Programming. Learning"
+    footer = "&copy; [Kush Nee](/) 2019 - 2020"
+    disqusURL = "https://kushnee.codes"
+
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.18.1"
+    highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    highlightjsLang = ["yaml", "toml", "java", "python", "sql"]
+    highlightjsTheme = "github"
+
