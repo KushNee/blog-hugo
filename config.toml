@@ -253,10 +253,10 @@ dateFormatToUse = "2006-01-02"
   # CSS and JS Files CDN
   [params.cdn]
     ## for example '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
-    fontawesomeFreeCSS = ''
-    animateCSS = ''
-    gitalkCSS = ''
-    gitalkJS = ''
+    fontawesome_free_css = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
+    animate_css = ''
+    gitalk_css = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">'
+    gitalk_js = '<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>'
     valineJS = ''
     lazysizesJS = ''
     smoothScrollJS = ''
@@ -314,10 +314,10 @@ dateFormatToUse = "2006-01-02"
 
     # Gittalk Comment Config (https://github.com/gitalk/gitalk)
     [params.comment.gitalk]
-      owner = ""
-      repo = ""
-      clientId = ""
-      clientSecret = ""
+      owner = "KushNee"
+      repo = "blog-hugo"
+      clientId = "f72d40aa83b62f364ed7"
+      clientSecret = "7afc348312ed07c59781698035e7c2c8218109e4"
 
     # Valine Comment Config (https://github.com/xCss/Valine)
     [params.comment.valine]
