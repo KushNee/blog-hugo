@@ -1,7 +1,7 @@
 +++
 title = "Lombok 中 Data 和 Builder 合用产生的问题"
 date = 2020-02-25T18:38:39+08:00
-draft = true
+draft = false
 tags = ["lombok", "java"]
 categories = ["Programming"]
 isCJKLanguage = true
