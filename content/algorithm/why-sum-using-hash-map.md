@@ -2,8 +2,8 @@
 title = "为什么求两数之和用哈希表比暴力法快"
 date = 2020-03-08T17:49:45+08:00
 draft = false
-tags = ["算法","两数之和","哈希表","时间复杂度"]
-categories = ["Programming"]
+tags = ["算法","哈希表","时间复杂度"]
+categories = ["Algorithm"]
 isCJKLanguage = true
 author = "Kush Nee"
 +++

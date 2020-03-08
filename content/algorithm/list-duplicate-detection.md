@@ -3,7 +3,7 @@ title = "算法笔记--数组内查询重复(空间复杂度 O(1))"
 date = 2020-03-07T02:52:08+08:00
 draft = false
 tags = ["算法"]
-categories = ["Programming"]
+categories = ["Algorithm"]
 isCJKLanguage = true
 author = "Kush Nee"
 +++
