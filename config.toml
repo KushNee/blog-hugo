@@ -8,7 +8,7 @@ title = "KCN | Back-end Developer"
 # theme
 theme = "LoveIt"
 # whether to use git commit log to generate lastmod record
-enableGitInfo = false
+enableGitInfo = true
 # whether to include chinese/japanese/korean
 hasCJKLanguage = true
 # default amount of posts in each pages
@@ -92,7 +92,7 @@ dateFormatToUse = "2006-01-02"
   # site default theme ("light", "dark", "auto")
   defaultTheme = "auto"
   # public git repo url to link lastmod git commit only then enableGitInfo is true
-  gitRepo = ""
+  gitRepo = "https://github.com/KushNee/blog-hugo"
 
   # Header info
   [params.header]
