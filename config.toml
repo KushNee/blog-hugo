@@ -82,7 +82,7 @@ dateFormatToUse = "2006-01-02"
 
 
 [params]
-  mainSections = ["life", "programming", "tools"]
+  mainSections = ["life", "programming", "algorithm", "tools"]
   # LoveIt theme version
   version = "0.1.X"
   # site description
