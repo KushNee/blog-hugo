@@ -53,3 +53,53 @@ markdown 中列表肯定是必不可少的。列表一般有这么几个问题�
 ### NOTE
 
 命令的键入比较麻烦，建议可以把这些命令统一绑定到 localleader 上，[which-key](https://github.com/liuchengxu/vim-which-key) 插件可以很清楚得展示这些按键信息。
+
+## 快速键入标记的配置
+
+markdown 的标记一共就那么几个，而在 vim 里中英文切换比较麻烦。所以，为了减少不必要的消耗，可以添加一些自动命令。下面是我的示例。
+
+```vim
+" 快速添加锚点
+autocmd Filetype markdown inoremap <buffer> <silent> ,, <++>
+" 寻找下一个锚点
+autocmd Filetype markdown inoremap <buffer> <silent> ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
+" 分割线
+autocmd Filetype markdown inoremap <buffer> <silent> ,- ---<Enter><Enter>
+" 加粗
+autocmd Filetype markdown inoremap <buffer> <silent> ,s **** <++><Esc>F*hi
+" 删除线
+autocmd Filetype markdown inoremap <buffer> <silent> ,x ~~~~ <++><Esc>F~hi
+" 斜体
+autocmd Filetype markdown inoremap <buffer> <silent> ,i ** <++><Esc>F*i
+" 行内代码
+autocmd Filetype markdown inoremap <buffer> <silent> ,q `` <++><Esc>F`i
+" 代码块
+autocmd Filetype markdown inoremap <buffer> <silent> ,c ```<++><Enter><++><Enter>```<Enter><Enter><++><Esc>4ki
+" 行内公式
+autocmd Filetype markdown inoremap <buffer> <silent> ,e $$ <++><Esc>F$i
+" todo
+autocmd Filetype markdown inoremap <buffer> <silent> ,d <Esc>0Di- [ ] <ESC>A
+" 下划线
+autocmd Filetype markdown inoremap <buffer> <silent> ,u <u></u><++><Esc>F/hi
+" 图片
+autocmd Filetype markdown inoremap <buffer> <silent> ,p ![](<++>) <++><Esc>F[a
+" 链接
+autocmd Filetype markdown inoremap <buffer> <silent> ,a [](<++>) <++><Esc>F[a
+" 一号标题
+autocmd Filetype markdown inoremap <buffer> <silent> ,1 #<Space><Enter><Enter><++><Esc>2kA
+" 二号标题
+autocmd Filetype markdown inoremap <buffer> <silent> ,2 ##<Space><Enter><Enter><++><Esc>2kA
+" 三号标题
+autocmd Filetype markdown inoremap <buffer> <silent> ,3 ###<Space><Enter><Enter><++><Esc>2kA
+" 四号标题
+autocmd Filetype markdown inoremap <buffer> <silent> ,4 ####<Space><Enter><Enter><++><Esc>2kA
+" 切换标题
+autocmd Filetype markdown nnoremap <buffer> <silent> <localleader>m1 <Esc>:s/^#*\s//<CR>0i#<Space><Esc>
+autocmd Filetype markdown nnoremap <buffer> <silent> <localleader>m2 <Esc>:s/^#*\s//<CR>0i##<Space><Esc>
+autocmd Filetype markdown nnoremap <buffer> <silent> <localleader>m3 <Esc>:s/^#*\s//<CR>0i###<Space><Esc>
+autocmd Filetype markdown nnoremap <buffer> <silent> <localleader>m4 <Esc>:s/^#*\s//<CR>0i####<Space><Esc>
+" 插入当前时间
+autocmd Filetype markdown inoremap <buffer> <silent> ,t <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+```
+
+善于利用 `autocmd`，可以节省很多时间。
