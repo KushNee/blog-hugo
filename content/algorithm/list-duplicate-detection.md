@@ -1,16 +1,16 @@
-+++
-title = "算法笔记--数组内查询重复(空间复杂度 O(1))"
-date = 2020-03-07T02:52:08+08:00
-draft = false
-tags = ["算法"]
-categories = ["Algorithm"]
-isCJKLanguage = true
-author = "Kush Nee"
-+++
+---
+title: "算法笔记--数组内查询重复(空间复杂度 O(1))"
+date: 2020-03-07T02:52:08+08:00
+draft: false
+tags: ["算法"]
+categories: ["Algorithm"]
+isCJKLanguage: true
+author: "Kush Nee"
+---
 
->假设有一个长度为 n 的数组，所有数字都在 0~n-1 范围内。数组中某些数字是重复的，但不知道几个数字重复了，也不知道每个数字重复了几次。
->请找出数组中任意一个重复的数字。
->例如：一个数组 array: {2,3,1,2,4,5}，那么对应输出是重复数字 2
+> 假设有一个长度为 n 的数组，所有数字都在 0~n-1 范围内。数组中某些数字是重复的，但不知道几个数字重复了，也不知道每个数字重复了几次。
+> 请找出数组中任意一个重复的数字。
+> 例如：一个数组 array: {2, 3, 1, 2, 4, 5}，那么对应输出是重复数字 2
 
 <!--more-->
 
@@ -25,13 +25,13 @@ author = "Kush Nee"
 
 具体过程就是：
 
-- 从下标 0 对应的数字开始，首先查看它所对应的下标 array[0] 上的数字是否和它重复。若重复则直接可返回；若不重复，则将 array[0] 和 array[array[0]] 交换位置
-- 此时若 array[0] != 0，则继续进行同上交换；若 array[0] == 0，则移动到下一个下标，即 1，然后仍然对 array[1] 做同上交换
-- 如此反复
+* 从下标 0 对应的数字开始，首先查看它所对应的下标 array[0] 上的数字是否和它重复。若重复则直接可返回；若不重复，则将 array[0] 和 array[array[0]] 交换位置
+* 此时若 array[0] != 0，则继续进行同上交换；若 array[0] == 0，则移动到下一个下标，即 1，然后仍然对 array[1] 做同上交换
+* 如此反复
 
 这里给出一份代码实现：
 
-```java
+``` java
 class Solution {
     public static int duplicationNum(int[] nums) {
         int i = 0;
@@ -59,7 +59,7 @@ class Solution {
 
 当然，你也可以用通用排序后查找重复的方式，基本就是两个指针顺序后移查看是否相同
 
-```java
+``` java
 public static int duplicationNum2(int[] nums) {
         Arrays.sort(nums);
         int slow = 0, fast = 1;
@@ -75,4 +75,4 @@ public static int duplicationNum2(int[] nums) {
     }
 ```
 
-顺便说一句，`Arrays.sort` 底层使用的是快排、双轴快排、归并排序、插入排序和计数排序等，时间复杂度随着数组长度不同在 $O(n)$~$O(n\log{}n)$ 之间。
+顺便说一句， `Arrays.sort` 底层使用的是快排、双轴快排、归并排序、插入排序和计数排序等，时间复杂度随着数组长度不同在 $O(n)$~$O(n\log{}n)$ 之间。
