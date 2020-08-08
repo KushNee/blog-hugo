@@ -120,7 +120,7 @@ dateFormatToUse = "2006-01-02"
       # URL of avatar shown in home page
       avatarURL = "img/avatar.png"
       # subtitle shown in home page
-      subtitle = "Workout. Programming. Learning"
+      subtitle = "PT & Code"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
