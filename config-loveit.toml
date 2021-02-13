@@ -11,39 +11,23 @@ title = "KCN | Back-end Developer"
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "LoveIt"
 
-[menu]
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "标签"
-    url = "/tags/"
-    title = ""
-    weight = 1
-  [[menu.main]]
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "分类"
-    url = "/categories/"
-    title = ""
-    weight = 2
+toc = true
 
 [params]
   mainSections = ["life", "programming", "algorithm", "tools"]
   #  LoveIt 主题版本
   version = "0.2.X"
   # 网站描述
-  description = "blog about code"
+  description = "这是我的全新 Hugo 网站"
   # 网站关键词
-  keywords = ["back-end", "java"]
+  keywords = ["Theme", "Hugo"]
   # 网站默认主题样式 ("light", "dark", "auto")
   defaultTheme = "auto"
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = "https://github.com/KushNee/blog-hugo"
+  gitRepo = ""
   #  哪种哈希函数用来 SRI, 为空时表示不使用 SRI
   # ("sha256", "sha384", "sha512", "md5")
-  fingerprint = "sha256"
+  fingerprint = ""
   #  日期格式
   dateFormat = "2006-01-02"
   # 网站图片, 用于 Open Graph 和 Twitter Cards
@@ -72,7 +56,7 @@ theme = "LoveIt"
     # 文章内容最长索引长度
     contentLength = 4000
     # 搜索框的占位提示语
-    placeholder = "输入关键字"
+    placeholder = ""
     #  最大结果数目
     maxResultLength = 10
     #  结果内容片段长度
@@ -97,7 +81,7 @@ theme = "LoveIt"
       # LOGO 的 URL
       logo = ""
       # 标题名称
-      name = "KCN | Back-end Developer"
+      name = ""
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = ""
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
@@ -151,11 +135,11 @@ theme = "LoveIt"
       # Gravatar 邮箱，用于优先在主页显示的头像
       gravatarEmail = ""
       # 主页显示头像的 URL
-      avatarURL = "https://kushnee.codes/img/avatar.png"
+      avatarURL = "img/avatar.png"
       #  主页显示的网站标题 (支持 HTML 格式)
-      title = "KCN | Back-end Developer"
+      title = ""
       # 主页显示的网站副标题
-      subtitle = "PT & Code"
+      subtitle = "这是我的全新 Hugo 网站"
       # 是否为副标题显示打字机动画
       typeit = false
       # 是否显示社交账号
@@ -236,7 +220,7 @@ theme = "LoveIt"
     # Matrix = ""
     # Bilibili = ""
     # Email = "xxxx@xxxx.com"
-    RSS = true # 
+    # RSS = true # 
 
   #  文章页面配置
   [params.page]
@@ -263,7 +247,7 @@ theme = "LoveIt"
       # 是否使用目录
       enable = true
       #  是否保持使用文章前面的静态目录
-      keepStatic = false
+      keepStatic = true
       # 是否使侧边目录自动折叠展开
       auto = true
     #  代码配置
@@ -271,7 +255,7 @@ theme = "LoveIt"
       # 是否显示代码块的复制按钮
       copy = true
       # 默认展开显示的代码行数
-      maxShownLines = 20
+      maxShownLines = 10
     #  KaTeX 数学公式
     [params.page.math]
       enable = true
@@ -306,31 +290,31 @@ theme = "LoveIt"
       enable = true
       Twitter = true
       Facebook = true
-      Linkedin = true
-      Whatsapp = false
-      Pinterest = true
+      Linkedin = false
+      Whatsapp = true
+      Pinterest = false
       Tumblr = false
       HackerNews = false
-      Reddit = false
-      VK = false
-      Buffer = false
-      Xing = false
-      Line = false
-      Instapaper = false
-      Pocket = false
-      Digg = false
-      Stumbleupon = false
-      Flipboard = false
+      # Reddit = false
+      # VK = false
+      # Buffer = false
+      # Xing = false
+      # Line = true
+      # Instapaper = false
+      # Pocket = false
+      # Digg = false
+      # Stumbleupon = false
+      # Flipboard = false
       Weibo = true
-      Renren = false
-      Myspace = true
-      Blogger = true
-      Baidu = false
-      Odnoklassniki = false
-      Evernote = true
-      Skype = false
-      Trello = false
-      Mix = false
+      # Renren = false
+      # Myspace = true
+      # Blogger = true
+      # Baidu = false
+      # Odnoklassniki = false
+      # Evernote = true
+      # Skype = false
+      # Trello = false
+      # Mix = false
     #  评论系统设置
     [params.page.comment]
       enable = true
@@ -343,11 +327,11 @@ theme = "LoveIt"
       # Gitalk 评论系统设置
       [params.page.comment.gitalk]
         # 
-        enable = true
-        owner = "KushNee"
-        repo = "blog-hugo"
-        clientId = "f72d40aa83b62f364ed7"
-        clientSecret = "7afc348312ed07c59781698035e7c2c8218109e4"
+        enable = false
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
       # Valine 评论系统设置
       [params.page.comment.valine]
         enable = false
@@ -510,14 +494,14 @@ theme = "LoveIt"
       unsafe = true
   # 目录设置
   [markup.tableOfContents]
-    startLevel = 1
-    endLevel = 3
+    startLevel = 2
+    endLevel = 6
 
 # 作者配置
 [author]
   name = "KCN"
-  email = "kushnee5@gmail.com"
-  link = "https://kushnee.codes/"
+  email = ""
+  link = ""
 
 # 网站地图配置
 [sitemap]
