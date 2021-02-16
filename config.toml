@@ -337,13 +337,13 @@ theme = "LoveIt"
       # Disqus 评论系统设置
       [params.page.comment.disqus]
         # 
-        enable = false
+        enable = true
         # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-        shortname = ""
+        shortname = "sotoughtofindshort"
       # Gitalk 评论系统设置
       [params.page.comment.gitalk]
         # 
-        enable = true
+        enable = false
         owner = "KushNee"
         repo = "blog-hugo"
         clientId = "f72d40aa83b62f364ed7"
