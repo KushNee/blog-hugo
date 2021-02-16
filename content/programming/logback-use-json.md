@@ -73,7 +73,7 @@ MessageConverter 已经是一个具体的类了，为什么要继承它而不是
 springboot 是使用 LoggingApplicationListener 这个类完成对日志系统初始化的。我们先来看下这个类，顺便还能理解怎么自动装配的 logback-spring.xml 文件。
 
 当然，先放张时序图便于理解：
-```mermaid
+{{< mermaid >}}
 sequenceDiagram
 participant A as LoggingApplicationListener
 participant B as LogbackLoggingSystem
@@ -90,7 +90,7 @@ note right of B:获取带spring文字的配置文件(logback-spring.xml)
 B->>B:config=getSpringInitializationConfig()
 end
 B->>B:loadConfiguration
-```
+{{< /mermaid >}}
 
 首先，`LoggingApplicationListerner`使用观察者模式监听到 spring 应用启动后的环境准备事件：`ApplicationEnvironmentPreparedEvent`，然后就会去执行相关的初始化操作，获取配置文件。
 
@@ -124,7 +124,7 @@ protected String[] getSpringConfigLocations() {
 
 来，再来个时序图(只会提供转换器相关初始化的过程，其他元素的动作被省略了）：
 
-```mermaid
+{{< mermaid >}}
 sequenceDiagram
 participant A as LogbackLoggingSystem
 participant B as JoranConfigurator
@@ -144,7 +144,7 @@ D->>C:startElement
 C->>C:callBeginAction
 C->>E:begin
 E->>E:ruleRegistry.put
-```
+{{< /mermaid >}}
 
 细节上，SaxEventRecorder 在进行 `recordEvents ` 时会创建一个 `SAXParser` 用于解析 xml 文件，然后再调用重载的 `startElement` 方法把相关的 startElement 放到一个 list 中。![image-20210216142528250](https://i.loli.net/2021/02/16/JnIVijaOpm3fCsc.png)
 
@@ -154,13 +154,15 @@ startElement 方法中，先过滤出相关 tag 的 action，然后调用 callBe
 
 再加之后的一些验证、上下文信息补全的操作，logback 就把一个配置文件的内容反序列化到上下文中了。
 
-==tip==: 这里也能看出一个结论，当你对同一个 conversionWord 提供了多个不同的转换器的时候，只有最后一个会生效。因为依次对 conversionRule 执行ConversionRuleAction#begin，新的一个转换器会覆盖掉 ruleRegistry 中相同 key 的值。（hashMap#put 的基本知识）
+{{< admonition type=tip title="tip" open=true >}}
+这里也能看出一个结论，当你对同一个 conversionWord 提供了多个不同的转换器的时候，只有最后一个会生效。因为依次对 conversionRule 执行ConversionRuleAction#begin，新的一个转换器会覆盖掉 ruleRegistry 中相同 key 的值。（hashMap#put 的基本知识）
+{{< /admonition >}}
 
 ## Logger 的具体调用
 
 最后在实际使用上的流程：
 
-```mermaid
+{{< mermaid >}}
 sequenceDiagram
 participant A as Logger
 participant B as AppenderAttachableImpl
@@ -176,7 +178,7 @@ C->>D:append
 D->>E:encode
 E->>F:doLayout
 F->>F:writeLoopOnConverters
-```
+{{< /mermaid >}}
 
 而 PatternLayout 继承的 PatternLayoutBase 会在自身初始化的时候，解析配置文件中的正则表达式，然后将关键字对应的转换器添加到一条链表中。所以在执行 writeLoopOnConverters 的时候，就是依次执行这些转换器，最后吐出一条转换完的字符串。**（具体初始化的调用在哪还没看到，之后看完了再重新写一篇吧）**
 
